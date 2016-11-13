@@ -1,0 +1,11 @@
+# Wired adapter #1
+allow-hotplug eth0
+
+iface eth0 inet static
+    address {{IP}}
+    netmask 255.255.240.0
+    gateway 10.42.16.1
+
+# Local loopback
+auto lo
+iface lo inet loopback
