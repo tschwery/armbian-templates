@@ -21,6 +21,7 @@ build_image() {
 
     sudo mkdir $MOUNTDIR/root/.ssh/
     cat ~/.ssh/id_*.pub | sudo tee -a $MOUNTDIR/root/.ssh/authorized_keys >/dev/null
+    sudo rm $MOUNTDIR/root/.not_logged_in_yet
 
     sudo umount $MOUNTDIR
     rmdir $MOUNTDIR
